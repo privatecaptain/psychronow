@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Page1Form.ui.qml</file>
+        <file>Page2Form.ui.qml</file>
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>map.png</file>
+        <file>wizard.png</file>
+        <file>Page3Form.ui.qml</file>
+        <file>tap.png</file>
+        <file>First.qml</file>
+        <file>td.jpg</file>
+        <file>50d.svg</file>
+        <file>move-up.png</file>
+        <file>arrow-pointing-to-down (1).png</file>
+        <file>arrow-pointing-to-down (2).png</file>
+        <file>HighLabel.qml</file>
+        <file>tt.png</file>
+        <file>Ultra.otf</file>
+        <file>Stellar-light.otf</file>
+        <file>Stellar-Bold.otf</file>
+        <file>altitude.png</file>
+        <file>placeholder.png</file>
+        <file>Voyager Grotesque(regular).ttf</file>
+        <file>Veger(light).ttf</file>
+        <file>V-GERB(bold).ttf</file>
+        <file>right-arrow (1).png</file>
+        <file>Next.qml</file>
+        <file>bracket.png</file>
+        <file>coreFunctions.js</file>
+        <file>Second.qml</file>
+        <file>High2.qml</file>
+        <file>Third.qml</file>
+        <file>map (1).png</file>
+        <file>Location.qml</file>
+        <file>3319.jpg</file>
+        <file>Manual.qml</file>
+        <file>HighEdit.qml</file>
+        <file>FlashButton.qml</file>
+        <file>pin.png</file>
+        <file>Suggestion.qml</file>
+        <file>placeholder (1).png</file>
+        <file>flash.png</file>
+        <file>navigation.png</file>
+    </qresource>
+</RCC>
