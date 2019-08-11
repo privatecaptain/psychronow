@@ -49,7 +49,7 @@ Item {
             topPadding: 0
             horizontalAlignment: Text.AlignRight
             inputMethodHints: Qt.ImhFormattedNumbersOnly
-
+            validator: DoubleValidator{}
             font.family: voyager.name
 
 

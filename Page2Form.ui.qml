@@ -26,7 +26,7 @@ Page {
             x: 0
             y: 0
             width: parent.width
-            height: parent.height
+            height: parent.parent.height
         }
 
         First {
@@ -52,15 +52,20 @@ Page {
         id: next
         x: 285 / 360 * parent.width
         y: 552 / 600 * parent.height
+        width: 61 / 360 * parent.width
+        height: 44 / 600 * parent.height
+
         visible: false
         contentItem: Text {
             text: qsTr("NEXT")
+            fontSizeMode: Text.Fit
             color: "white"
         }
         font.family: voyager.name
 
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
     }
 
@@ -68,14 +73,19 @@ Page {
         id: back
         x: 15 / 360 * parent.width
         y: 552 / 600 * parent.height
+        width: 63 / 360 * parent.width
+        height: 44 / 600 * parent.height
+
         visible: false
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
 
         contentItem: Text {
             color: "#ffffff"
             text: qsTr("BACK")
+            fontSizeMode: Text.Fit
         }
         font.family: voyager.name
     }

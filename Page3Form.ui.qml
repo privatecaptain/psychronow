@@ -49,6 +49,7 @@ Page {
         Layout.leftMargin: 10
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
         font.family: voyager.name
         contentItem: Text {
@@ -70,6 +71,7 @@ Page {
         id: manualButton
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
         font.family: voyager.name
         contentItem: Text {
@@ -92,6 +94,7 @@ Page {
         anchors.rightMargin: 10
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
         font.family: voyager.name
         contentItem: Text {
@@ -115,6 +118,7 @@ Page {
         visible: false
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
 
         contentItem: Text {

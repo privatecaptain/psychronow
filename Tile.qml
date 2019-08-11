@@ -6,7 +6,7 @@ import QtQuick.Layouts 1.12
 Item {
     property alias name: name.text
     width: 100
-    height: 60
+    height: 80
     property alias image: image.source
 
     Image {
@@ -14,7 +14,7 @@ Item {
         x: 0
         y: 0
         width: 100
-        height: 45
+        height: 65
         fillMode: Image.Stretch
         source: "tt.png"
     }
@@ -22,7 +22,7 @@ Item {
     Text {
         id: name
         x: 0
-        y: 47
+        y: 67
         width: 100
         text: qsTr("Toronto")
         fontSizeMode: Text.Fit
@@ -34,6 +34,8 @@ Item {
 
 
 }
+
+
 
 
 

@@ -51,14 +51,18 @@ Page {
         id: next
         x: parent.width * (285 / 360)
         y: parent.height * (552 / 600)
+        width: 61 / 360 * parent.width
+        height: 44 / 600 * parent.height
         contentItem: Text {
             text: qsTr("NEXT")
+            fontSizeMode: Text.Fit
             color: "white"
         }
         font.family: voyager.name
 
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
     }
 
@@ -66,14 +70,19 @@ Page {
         id: back
         x: parent.width * (15 / 360)
         y: parent.height * (552 / 600)
+        width: 63 / 360 * parent.width
+        height: 44 / 600 * parent.height
+
         visible: false
         background: Rectangle {
             color: "#de0b27b4"
+            radius: 4
         }
 
         contentItem: Text {
             color: "#ffffff"
             text: qsTr("BACK")
+            fontSizeMode: Text.Fit
         }
         font.family: voyager.name
     }

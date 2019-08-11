@@ -2,6 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 
 Item {
+    id: element1
     width: 360
     height: 600
     property alias tokyo: tokyo
@@ -21,8 +22,8 @@ Item {
     Image {
         id: image1
         y: 8
-        width: 64/360 * parent.width
-        height: 64/600 * parent.height
+        width: 64
+        height: 64
         anchors.left: parent.left
         anchors.leftMargin: 56
         fillMode: Image.PreserveAspectFit
@@ -43,9 +44,9 @@ Item {
     TextField {
         id: loca
         x: 63
-        y: 107
-        width: 247/360 * parent.width
-        height: 65/600 * parent.height
+        y: 107/600 * parent.height
+        width: 247
+        height: 65
         z: 1
         verticalAlignment: Text.AlignBottom
 
@@ -81,10 +82,10 @@ Item {
 
     ListView {
         id: listView
-        x: 57 /360 * parent.width
         y: 165/600 * parent.height
-        width: 247/360 * parent.width
-        height: 160/600 * parent.height
+        width: 247
+        height: 160
+        anchors.horizontalCenter: parent.horizontalCenter
         z: 1
         visible: true
 
@@ -158,24 +159,27 @@ Item {
 
     Label {
         id: label1
-        x: 163/360 * parent.width
+        x: 163
         y: 282/600 * parent.height
         color: "#de0b27b4"
         text: qsTr("Most Popular")
+        horizontalAlignment: Text.AlignHCenter
+        fontSizeMode: Text.Fit
         font.italic: true
         font.family: stellar.name
         font.underline: false
         font.pointSize: 19
-        anchors.horizontalCenterOffset: 1
+        anchors.horizontalCenterOffset: 0
         anchors.horizontalCenter: parent.horizontalCenter
     }
 
     Grid {
         id: grid
-        x: 15/360 * parent.width
-        y: 334
-        width: 332/360 * parent.width
-        height: 210/600 * parent.height
+        y: 334/600 * parent.height
+        width: 320/360 * parent.width
+        height: 260/600 * parent.height
+        anchors.horizontalCenter: parent.horizontalCenter
+        rows: 3
         spacing: 10
         columns: 3
 
@@ -271,10 +275,11 @@ Item {
     Button {
         id: search
         x: 144
-        y: 178
+        y: 178/600 * parent.height
         width: 72
         height: 36
         text: qsTr("SELECT")
+        anchors.horizontalCenter: parent.horizontalCenter
     }
     BusyIndicator {
         id: busyIndicator
