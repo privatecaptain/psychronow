@@ -253,12 +253,7 @@ Item {
         z: -2
     }
 
-    ColumnLayout {
-        id: columnLayout
-        y: parent.height * (47/55)
-        width: parent.width * 0.9
-        height: parent.height * (7/55)
-        anchors.horizontalCenter: parent.horizontalCenter
+
 
         Text {
             id: w1
@@ -266,6 +261,11 @@ Item {
             height: 22
             color: "#e23030"
             text: qsTr("Required: Dry Bulb")
+            fontSizeMode: Text.Fit
+            anchors.left: parent.left
+            anchors.leftMargin: 30
+            anchors.top: column.bottom
+            anchors.topMargin: 10
             Layout.fillHeight: false
             Layout.fillWidth: false
             Layout.leftMargin: 10
@@ -277,6 +277,11 @@ Item {
             height: 22
             color: "#e23030"
             text: qsTr("Required: Elevation")
+            fontSizeMode: Text.Fit
+            anchors.left: parent.left
+            anchors.leftMargin: 30
+            anchors.top: w1.bottom
+            anchors.topMargin: 2
             Layout.fillHeight: false
             Layout.leftMargin: 10
             Layout.topMargin: 0
@@ -285,14 +290,19 @@ Item {
 
         Text {
             id: w3
-            width: 167
+            width: 312
             height: 22
             color: "#e23030"
             text: qsTr("Required: RH or DewPoint or WetBulb")
+            fontSizeMode: Text.Fit
+            anchors.left: parent.left
+            anchors.leftMargin: 30
+            anchors.top: w2.bottom
+            anchors.topMargin: 2
             Layout.fillHeight: false
             Layout.leftMargin: 10
         }
-    }
+
 }
 
 
@@ -319,7 +329,13 @@ Item {
 
 
 
+
+
+
+
+
+
 /*##^## Designer {
-    D{i:1;anchors_y:"-8"}D{i:15;anchors_x:160}D{i:16;anchors_x:40;anchors_y:447}D{i:17;anchors_y:470}
+    D{i:1;anchors_y:"-8"}D{i:14;anchors_width:167;anchors_y:470}
 }
  ##^##*/
