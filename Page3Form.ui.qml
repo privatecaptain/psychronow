@@ -55,9 +55,9 @@ Page {
 
             color: "#ffffff"
             text: qsTr("CLEAR")
+            fontSizeMode: Text.Fit
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            font.pointSize: 11
         }
         visible: true
     }
@@ -77,7 +77,6 @@ Page {
             text: qsTr("CALCULATE")
             horizontalAlignment: Text.AlignHCenter
             fontSizeMode: Text.HorizontalFit
-            font.pointSize: 11
             verticalAlignment: Text.AlignVCenter
         }
         visible: true
@@ -98,9 +97,9 @@ Page {
         contentItem: Text {
             color: "#ffffff"
             text: qsTr("NEXT")
+            fontSizeMode: Text.Fit
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            font.pointSize: 11
         }
         visible: true
     }
@@ -121,9 +120,9 @@ Page {
         contentItem: Text {
             color: "#ffffff"
             text: qsTr("BACK")
+            fontSizeMode: Text.Fit
             visible: true
             verticalAlignment: Text.AlignVCenter
-            font.pointSize: 11
         }
         font.family: voyager.name
     }
