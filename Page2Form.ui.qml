@@ -16,7 +16,7 @@ Page {
 
     StackView {
         id: locaView
-        height: 550
+        height: 550 / 600 * parent.height
         clip: true
         anchors.bottomMargin: 49
         anchors.fill: parent
@@ -25,16 +25,22 @@ Page {
             id: location
             x: 0
             y: 0
+            width: parent.width
+            height: parent.height
         }
 
         First {
             id: first
             visible: false
+            width: parent.width
+            height: parent.height
         }
 
         Second {
             id: second
             visible: false
+            width: parent.width
+            height: parent.height
         }
 
         Third {
@@ -44,8 +50,8 @@ Page {
     }
     Button {
         id: next
-        x: 285
-        y: 552
+        x: 285 / 360 * parent.width
+        y: 552 / 600 * parent.height
         visible: false
         contentItem: Text {
             text: qsTr("NEXT")
@@ -60,8 +66,8 @@ Page {
 
     Button {
         id: back
-        x: 15
-        y: 552
+        x: 15 / 360 * parent.width
+        y: 552 / 600 * parent.height
         visible: false
         background: Rectangle {
             color: "#de0b27b4"

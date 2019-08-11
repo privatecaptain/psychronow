@@ -444,11 +444,10 @@ ApplicationWindow {
 //
             }
 
-
-            location.search.onClicked: {
+            function searchShit(loc){
                 location.busyIndicator.running = true;
 
-                request('http://api.apixu.com/v1/current.json?key=eca2cc7e249f451b9f1102803191606&q='+location.loca.text,function (o){
+                request('http://api.apixu.com/v1/current.json?key=eca2cc7e249f451b9f1102803191606&q='+loc,function (o){
                     console.info(o);
                     console.info("re");
                     var dd = JSON.parse(o.responseText);
@@ -486,6 +485,20 @@ ApplicationWindow {
                 });
 
             }
+
+            location.search.onClicked: {
+                searchShit(location.loca.text);
+            }
+
+            location.toronto.onClicked: {searchShit("Toronto")}
+            location.paris.onClicked: {searchShit("Paris")}
+            location.la.onClicked: {searchShit("Los Angeles")}
+            location.tokyo.onClicked: {searchShit("Tokyo")}
+            location.beijing.onClicked: {searchShit("beijing")}
+            location.phoenix.onClicked: {searchShit("Phoenix")}
+            location.dubai.onClicked: {searchShit("Dubai")}
+            location.london.onClicked: {searchShit("London")}
+            location.nyc.onClicked: {searchShit("New York City")}
 
             second.indirectSwitch.onCheckedChanged: {
                 if(second.indirectSwitch.checked){

@@ -43,5 +43,14 @@
         <file>placeholder (1).png</file>
         <file>flash.png</file>
         <file>navigation.png</file>
+        <file>Tile.qml</file>
+        <file>phoenix.jpg</file>
+        <file>paris.jpg</file>
+        <file>la.jpg</file>
+        <file>beijing.jpg</file>
+        <file>tokyo.webp</file>
+        <file>london.jpg</file>
+        <file>dubai.jpg</file>
+        <file>nyc.jpg</file>
     </qresource>
 </RCC>

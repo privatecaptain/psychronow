@@ -48,8 +48,8 @@ Item {
             bottomPadding: 0
             topPadding: 0
             horizontalAlignment: Text.AlignRight
-            inputMethodHints: Qt.ImhDigitsOnly
-            validator: IntValidator {bottom: 0; top: 2000;}
+            inputMethodHints: Qt.ImhFormattedNumbersOnly
+
             font.family: voyager.name
 
 

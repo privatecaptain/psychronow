@@ -62,7 +62,6 @@ int main(int argc, char *argv[])
         return -1;
 #endif
     QLoggingCategory::setFilterRules("default.debug=true");
-    QtAndroid::checkPermission(QString("android.permission.ACCESS_FINE_LOCATION"));
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("sd",&sd);

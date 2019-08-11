@@ -33,94 +33,98 @@ Page {
         Second {
             id: second
             visible: false
+            height: parent.height
+            width: parent.width
         }
     }
 
-    RowLayout {
-        id: row
-        y: parent.height * (55 / 60)
-        width: parent.width
-        height: parent.height * (5 / 60)
-        spacing: 5
-
-        Button {
-            id: clearBtn
-            Layout.fillHeight: false
-            Layout.leftMargin: 10
-            background: Rectangle {
-                color: "#de0b27b4"
-            }
-            font.family: voyager.name
-            contentItem: Text {
-                color: "#ffffff"
-                text: qsTr("CLEAR")
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-            }
-            visible: true
+    Button {
+        y: 553 / 600 * parent.height
+        anchors.left: parent.left
+        anchors.leftMargin: 10
+        width: 70 / 360 * parent.width
+        height: 44 / 600 * parent.height
+        id: clearBtn
+        Layout.fillHeight: false
+        Layout.leftMargin: 10
+        background: Rectangle {
+            color: "#de0b27b4"
         }
+        font.family: voyager.name
+        contentItem: Text {
 
-        Button {
-            id: manualButton
-            Layout.fillHeight: false
-            Layout.leftMargin: 48
-            background: Rectangle {
-                color: "#de0b27b4"
-            }
-            font.family: voyager.name
-            contentItem: Text {
-                color: "#ffffff"
-                text: qsTr("CALCULATE")
-                verticalAlignment: Text.AlignVCenter
-            }
-            visible: true
+            color: "#ffffff"
+            text: qsTr("CLEAR")
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.pointSize: 11
         }
-
-        Button {
-            id: next
-            text: "NEXT"
-            Layout.fillHeight: false
-            Layout.leftMargin: 36
-            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-            Layout.rightMargin: 10
-            background: Rectangle {
-                color: "#de0b27b4"
-            }
-            font.family: voyager.name
-            contentItem: Text {
-                color: "#ffffff"
-                text: qsTr("NEXT")
-                verticalAlignment: Text.AlignVCenter
-            }
-            visible: true
-        }
+        visible: true
     }
 
-    RowLayout {
-        id: rowLayout
-        x: 0
-        y: parent.height * (55 / 60)
-        width: parent.width
-        height: parent.height * (5 / 60)
-        spacing: 5
-
-        Button {
-            id: back
-            text: "BACK"
-            Layout.leftMargin: 10
-            Layout.fillHeight: false
-            visible: false
-            background: Rectangle {
-                color: "#de0b27b4"
-            }
-
-            contentItem: Text {
-                color: "#ffffff"
-                text: qsTr("BACK")
-                visible: true
-                verticalAlignment: Text.AlignVCenter
-            }
-            font.family: voyager.name
+    Button {
+        y: 553 / 600 * parent.height
+        anchors.horizontalCenter: parent.horizontalCenter
+        width: 113 / 360 * parent.width
+        height: 44 / 600 * parent.height
+        id: manualButton
+        background: Rectangle {
+            color: "#de0b27b4"
         }
+        font.family: voyager.name
+        contentItem: Text {
+            color: "#ffffff"
+            text: qsTr("CALCULATE")
+            horizontalAlignment: Text.AlignHCenter
+            fontSizeMode: Text.HorizontalFit
+            font.pointSize: 11
+            verticalAlignment: Text.AlignVCenter
+        }
+        visible: true
+    }
+
+    Button {
+        y: 553 / 600 * parent.height
+        height: 44 / 600 * parent.height
+        width: 61 / 360 * parent.width
+        id: next
+        text: "NEXT"
+        anchors.right: parent.right
+        anchors.rightMargin: 10
+        background: Rectangle {
+            color: "#de0b27b4"
+        }
+        font.family: voyager.name
+        contentItem: Text {
+            color: "#ffffff"
+            text: qsTr("NEXT")
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.pointSize: 11
+        }
+        visible: true
+    }
+
+    Button {
+        id: back
+        x: 14 / 360 * parent.width
+        y: 553 / 600 * parent.height
+        height: 44 / 600 * parent.height
+        width: 63 / 360 * parent.width
+
+        text: "BACK"
+        visible: false
+        background: Rectangle {
+            color: "#de0b27b4"
+        }
+
+        contentItem: Text {
+            color: "#ffffff"
+            text: qsTr("BACK")
+            visible: true
+            verticalAlignment: Text.AlignVCenter
+            font.pointSize: 11
+        }
+        font.family: voyager.name
     }
 }

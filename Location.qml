@@ -3,7 +3,16 @@ import QtQuick.Controls 2.12
 
 Item {
     width: 360
-    height: 500
+    height: 600
+    property alias tokyo: tokyo
+    property alias beijing: beijing
+    property alias london: london
+    property alias dubai: dubai
+    property alias phoenix: phoenix
+    property alias la: la
+    property alias nyc: nyc
+    property alias paris: paris
+    property alias toronto: toronto
     property alias listView: listView
     property alias loca: loca
     property alias search: search
@@ -12,8 +21,8 @@ Item {
     Image {
         id: image1
         y: 8
-        width: 64
-        height: 64
+        width: 64/360 * parent.width
+        height: 64/600 * parent.height
         anchors.left: parent.left
         anchors.leftMargin: 56
         fillMode: Image.PreserveAspectFit
@@ -35,8 +44,8 @@ Item {
         id: loca
         x: 63
         y: 107
-        width: 247
-        height: 65
+        width: 247/360 * parent.width
+        height: 65/600 * parent.height
         z: 1
         verticalAlignment: Text.AlignBottom
 
@@ -72,10 +81,10 @@ Item {
 
     ListView {
         id: listView
-        x: 57
-        y: 165
-        width: 247
-        height: 160
+        x: 57 /360 * parent.width
+        y: 165/600 * parent.height
+        width: 247/360 * parent.width
+        height: 160/600 * parent.height
         z: 1
         visible: true
 
@@ -149,8 +158,8 @@ Item {
 
     Label {
         id: label1
-        x: 163
-        y: 231
+        x: 163/360 * parent.width
+        y: 282/600 * parent.height
         color: "#de0b27b4"
         text: qsTr("Most Popular")
         font.italic: true
@@ -163,10 +172,100 @@ Item {
 
     Grid {
         id: grid
-        x: 15
-        y: 284
-        width: 332
-        height: 198
+        x: 15/360 * parent.width
+        y: 334
+        width: 332/360 * parent.width
+        height: 210/600 * parent.height
+        spacing: 10
+        columns: 3
+
+        Tile {
+            id: tile
+            MouseArea{
+                anchors.fill: parent
+                id: toronto
+                }
+        }
+
+        Tile {
+            id: tile1
+            name: "Paris"
+            image: "paris.jpg"
+            MouseArea{
+                anchors.fill: parent
+                id: paris
+                }
+        }
+
+        Tile {
+            id: tile2
+            name: "New York"
+            image: "nyc.jpg"
+            MouseArea{
+                anchors.fill: parent
+                id: nyc
+                }
+        }
+
+        Tile {
+            id: tile4
+            name: "Los Angeles"
+            image: "la.jpg"
+            MouseArea{
+                anchors.fill: parent
+                id: la
+                }
+        }
+
+        Tile {
+            id: tile5
+            name: "Phoenix"
+            image: "phoenix.jpg"
+            MouseArea{
+                anchors.fill: parent
+                id: phoenix
+                }
+        }
+
+        Tile {
+            id: tile6
+            name: "Dubai"
+            image: "dubai.jpg"
+            MouseArea{
+                anchors.fill: parent
+                id: dubai
+                }
+        }
+
+        Tile {
+            id: tile7
+            name: "London"
+            image: "london.jpg"
+            MouseArea{
+                anchors.fill: parent
+                id: london
+                }
+        }
+
+        Tile {
+            id: tile9
+            name: "Tokyo"
+            image: "tokyo.webp"
+            MouseArea{
+                anchors.fill: parent
+                id: tokyo
+                }
+        }
+
+        Tile {
+            id: tile10
+            name: "Beijing"
+            image: "beijing.jpg"
+            MouseArea{
+                anchors.fill: parent
+                id: beijing
+                }
+        }
     }
 
     Button {
