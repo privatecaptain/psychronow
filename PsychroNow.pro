@@ -1,4 +1,4 @@
-QT += quick core network positioning
+QT += quick core network positioning gui
 #androidextras
 CONFIG += c++11 console
 

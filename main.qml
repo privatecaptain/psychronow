@@ -15,7 +15,7 @@ ApplicationWindow {
 
     property real lat: 0
     property real lon: 0
-    visibility: Window.FullScreen
+//    visibility: Window.FullScreen
     FontLoader{
         id: ultra
         source: "Ultra.otf"
@@ -108,6 +108,9 @@ ApplicationWindow {
                 checkUnits();
             }
 
+            first.gpsrefresh.onClicked: {
+                autoF();
+            }
 
             function checkUnits(){
                 if(first.unitSwitch.checked){
@@ -219,6 +222,7 @@ ApplicationWindow {
 
         Component.onCompleted: {
             autoF();
+
         }
 
         function autoF() {
@@ -234,6 +238,11 @@ ApplicationWindow {
             console.info(lt,lng);
 
             //Busy & Overlay
+            if(isNaN(lt)){
+                console.log('hiii');
+                first.city.text = 'Unable to get Location. Check Settings & press Auto.'
+                return;
+            }
 
             first.loading.running = true;
 

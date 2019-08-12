@@ -6,6 +6,8 @@ Item {
     id: element
     width: 360
     height: 550
+    property alias gpsrefresh: gpsrefresh
+    property alias gpsIcon: gpsIcon
     property alias loading: loading
     property alias elev: elev
     property alias unitSwitch: unitSwitch
@@ -244,11 +246,16 @@ Item {
 
     Image {
         id: gpsIcon
-        x: 0
         y: 27
         width: 32
+        anchors.left: parent.left
+        anchors.leftMargin: 20
         source: "navigation.png"
         fillMode: Image.PreserveAspectFit
+        MouseArea{
+            id: gpsrefresh
+            anchors.fill: parent
+        }
     }
 
 
@@ -300,3 +307,10 @@ Item {
 
 
 
+
+
+
+/*##^## Designer {
+    D{i:15;anchors_x:0}
+}
+ ##^##*/

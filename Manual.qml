@@ -22,6 +22,9 @@ Item {
 
     property real elevation: 0
 
+//    property QtObject foc: 0
+
+    property var af: 0;
     function toC(f){
         f = parseFloat(f);
         var c = (f -32)*(5/9);
@@ -152,13 +155,16 @@ Item {
 
             Layout.fillWidth: true
             labelText: "Dry Bulb (°F)"
+            textField.onPressed: {
+                showDone();
+                af = db;
+            }
 
         }
 
         HighEdit {
             id: rh
             x: 20
-            neg: false
             Layout.fillWidth: true
             Layout.fillHeight: true
 
@@ -169,6 +175,12 @@ Item {
                     dewpoint.textField.clear();
                 }
             }
+            textField.onPressed: {
+                showDone();
+                af = rh;
+
+            }
+
         }
         HighEdit {
             id: elev
@@ -177,6 +189,12 @@ Item {
             Layout.fillHeight: true
 
             labelText: "Elevation (Ft.)"
+            textField.onPressed: {
+                showDone();
+                af = elev;
+
+            }
+
         }
 
         HighEdit {
@@ -192,6 +210,12 @@ Item {
                     dewpoint.textField.clear();
                 }
             }
+            textField.onPressed: {
+                showDone();
+                af = wb;
+
+            }
+
         }
 
         HighEdit {
@@ -207,6 +231,12 @@ Item {
                     rh.textField.clear();
                 }
             }
+            textField.onPressed: {
+                showDone();
+                af = dewpoint;
+
+            }
+
         }
 
 
@@ -242,6 +272,12 @@ Item {
         }
 
 
+    }
+
+    function showDone(){
+        done.visible = true;
+        white.visible = true;
+        negative.visible = true;
     }
 
     Rectangle {
@@ -304,6 +340,90 @@ Item {
             Layout.leftMargin: 10
         }
 
+        Button {
+            id: done
+            x: 150
+            y: 380 / 550 * parent.height
+            width: 61 / 360 * parent.width
+            height: 44 / 550 * parent.height
+            text: "DONE"
+            anchors.right: parent.right
+            anchors.rightMargin: 100
+            z: 1
+            flat: false
+            highlighted: true
+            font.family: voyager.name
+            background: Rectangle {
+                color: "#ffffff"
+                radius: 4
+                border.color: "#e9e8e8"
+                border.width: 1
+            }
+            visible: true
+            contentItem: Text {
+                color: "#000000"
+                text: qsTr("DONE")
+                verticalAlignment: Text.AlignVCenter
+                fontSizeMode: Text.Fit
+                horizontalAlignment: Text.AlignHCenter
+            }
+
+
+            onClicked: {
+                done.visible = false;
+                white.visible = false;
+                negative.visible = false;
+            }
+
+        }
+        Rectangle {
+            id: white
+            width: parent.width
+            height: done.height
+
+            color: "#d1d2d7"
+            visible: true
+            z: 0
+            anchors.verticalCenter: done.verticalCenter
+        }
+
+        Button {
+            id: negative
+            y: 7
+            width: 61 / 360 * parent.width
+            height: 44 / 550 * parent.height
+            text: "DONE"
+            anchors.left: parent.left
+            anchors.leftMargin: 100
+            anchors.verticalCenter: done.verticalCenter
+            font.family: voyager.name
+            highlighted: true
+            background: Rectangle {
+                color: "#ffffff"
+                radius: 4
+                border.color: "#e9e8e8"
+                border.width: 1
+            }
+            visible: true
+            contentItem: Text {
+                color: "#000000"
+                text: qsTr(" – / +")
+                font.pointSize: 14
+                verticalAlignment: Text.AlignVCenter
+                fontSizeMode: Text.Fit
+                horizontalAlignment: Text.AlignHCenter
+            }
+            z: 1
+            MouseArea{
+                anchors.fill: parent
+                onClicked: {
+
+                        af.neg();
+
+                }
+            }
+        }
+
 }
 
 
@@ -338,7 +458,49 @@ Item {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*##^## Designer {
-    D{i:1;anchors_y:"-8"}D{i:14;anchors_width:167;anchors_y:470}
+    D{i:1;anchors_y:"-8"}D{i:14;anchors_width:167;anchors_y:470}D{i:21;anchors_x:152}
 }
  ##^##*/

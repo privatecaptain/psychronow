@@ -6,6 +6,7 @@
 #include <string>
 #include <main.h>
 #include <QQmlContext>
+#include <QInputMethod>
 #if defined (Q_OS_ANDROID)
 #include <QtAndroid>
 
