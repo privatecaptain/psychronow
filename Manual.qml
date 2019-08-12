@@ -158,6 +158,7 @@ Item {
         HighEdit {
             id: rh
             x: 20
+            neg: false
             Layout.fillWidth: true
             Layout.fillHeight: true
 
@@ -304,6 +305,8 @@ Item {
         }
 
 }
+
+
 
 
 

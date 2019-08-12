@@ -52,5 +52,11 @@
         <file>london.jpg</file>
         <file>dubai.jpg</file>
         <file>nyc.jpg</file>
+        <file>negative.png</file>
+        <file>plus.png</file>
+        <file>info.png</file>
+        <file>InfoPage.qml</file>
+        <file>air2o-logo-full.png</file>
+        <file>cancel.png</file>
     </qresource>
 </RCC>

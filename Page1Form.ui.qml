@@ -43,6 +43,7 @@ Page {
         Third {
             id: third
             x: 0
+            z: 0
             visible: false
         }
     }
@@ -55,6 +56,8 @@ Page {
         height: 44 / 600 * parent.height
         contentItem: Text {
             text: qsTr("NEXT")
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
             fontSizeMode: Text.Fit
             color: "white"
         }
@@ -82,6 +85,8 @@ Page {
         contentItem: Text {
             color: "#ffffff"
             text: qsTr("BACK")
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
             fontSizeMode: Text.Fit
         }
         font.family: voyager.name

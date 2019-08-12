@@ -192,8 +192,7 @@ Item {
             id: rh
             x: 35
             y: 230
-            Layout.fillWidth: false
-            Layout.rowSpan: 1
+            Layout.fillWidth: true
             elementText: ""
             labelText: "RH (%)"
         }
@@ -202,7 +201,7 @@ Item {
             id: dewpoint
             x: 35
             y: 230
-            Layout.fillWidth: false
+            Layout.fillWidth: true
             elementText: ""
         }
 

@@ -48,12 +48,12 @@ Item {
             width: 60
             height: 37
             text: "0"
-            rightPadding: 20
+            rightPadding: 10
             font.pointSize: 20
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignRight
             anchors.right: parent.right
-            anchors.rightMargin: 10
+            anchors.rightMargin: 20
             Layout.fillHeight: true
             Layout.rightMargin: 10
             Layout.alignment: Qt.AlignRight | Qt.AlignVCenter

@@ -52,6 +52,46 @@ ApplicationWindow {
        }
 
 
+    Image {
+        id: info
+        width: 40
+        height: 40
+        z: 2
+        anchors.top: parent.top
+        anchors.topMargin: 10
+        anchors.right: parent.right
+        anchors.rightMargin: 10
+        source: "info.png"
+        MouseArea{
+            anchors.fill: parent
+            onClicked: {
+                infop.visible = true;
+            }
+        }
+    }
+
+    Rectangle {
+        id: rectangle
+        x: 293
+        width: 100
+        height: 100
+        color: "#ffffff"
+        radius: 50
+        border.width: 1
+        z: 1
+        anchors.top: parent.top
+        anchors.topMargin: -36
+        anchors.right: parent.right
+        anchors.rightMargin: -33
+    }
+
+    InfoPage{
+        id: infop
+        width: parent.width
+        height: parent.height
+        visible: false
+        z: 2
+    }
 
 
     SwipeView {

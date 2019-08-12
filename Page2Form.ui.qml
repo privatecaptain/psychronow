@@ -58,6 +58,8 @@ Page {
         visible: false
         contentItem: Text {
             text: qsTr("NEXT")
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
             fontSizeMode: Text.Fit
             color: "white"
         }
@@ -85,6 +87,8 @@ Page {
         contentItem: Text {
             color: "#ffffff"
             text: qsTr("BACK")
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
             fontSizeMode: Text.Fit
         }
         font.family: voyager.name
